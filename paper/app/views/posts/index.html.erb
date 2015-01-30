@@ -1,0 +1,19 @@
+<%= link_to "All Posts", all_posts_path %>
+
+<%= pluralize 10, "octopus" %>
+
+
+Goal: Add button on this page to take us to "Add New Post"
+
+
+<%= link_to "Add New Post", new_post_path, class: "btn btn-default" %>
+
+
+<ul>
+  <% 20.times do |i| %>
+    <% next if i == 0 %>
+    <li>
+      <%= link_to "View #{i.ordinalize} Post", post_detail_path(id: i) %>
+    </li>
+  <% end %>
+</ul>
